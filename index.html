@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071a3d">
+<title>For My Babiii 💙</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap');
+
+:root{
+  --navy:#061735;
+  --blue:#1677ff;
+  --sky:#73c8ff;
+  --ice:#eaf7ff;
+  --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--white); background:var(--navy);
+  font-family:"DM Sans",sans-serif; overflow-x:hidden;
+}
+body:before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:20;
+  background:radial-gradient(circle at 20% 20%,rgba(115,200,255,.14),transparent 30%),
+             radial-gradient(circle at 80% 70%,rgba(22,119,255,.12),transparent 35%);
+}
+section{min-height:100vh; padding:80px 22px; display:flex; align-items:center; justify-content:center; position:relative}
+.card{width:min(720px,100%); text-align:center}
+.script{font-family:Pacifico,cursive}
+h1{font-size:clamp(3rem,13vw,7rem); line-height:1; margin:10px 0}
+h2{font-size:clamp(2rem,8vw,4rem); margin:10px 0}
+p{font-size:1.05rem; line-height:1.8; color:#d9efff}
+.small{font-size:.9rem;color:#9ccdf3}
+button,.btn{
+  border:0; border-radius:999px; padding:15px 25px; font-weight:700;
+  background:white; color:#0758bd; font-size:1rem; cursor:pointer;
+  box-shadow:0 10px 35px rgba(0,0,0,.25); transition:.25s;
+  text-decoration:none; display:inline-block;
+}
+button:hover,.btn:hover{transform:translateY(-3px) scale(1.02)}
+.hero{
+  background:
+    radial-gradient(circle at 50% 35%,#174d9b 0,#0b2a62 30%,#061735 72%);
+}
+.glow{
+  width:220px;height:220px;border-radius:50%;margin:0 auto 25px;
+  background:radial-gradient(circle,#9ee0ff 0,rgba(80,177,255,.28) 35%,transparent 70%);
+  filter:blur(2px); animation:pulse 3s ease-in-out infinite;
+}
+@keyframes pulse{50%{transform:scale(1.12);opacity:.8}}
+.fade{animation:rise 1s ease both}
+.delay1{animation-delay:.2s}.delay2{animation-delay:.45s}.delay3{animation-delay:.7s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hearts{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.heart{position:absolute;bottom:-50px;opacity:.65;animation:float linear infinite}
+@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.message{
+  background:linear-gradient(180deg,#0a2450,#061735);
+}
+.letter{
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.13);
+  border-radius:30px; padding:30px; text-align:left;
+  box-shadow:0 20px 80px rgba(0,0,0,.25); backdrop-filter:blur(10px);
+}
+.letter p{font-size:1.1rem}
+.gallery{background:#071a3d}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}
+.pic{
+  width:100%; aspect-ratio:1/1.15; object-fit:cover; border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,.3); transition:.35s;
+}
+.pic:hover{transform:rotate(-1deg) scale(1.02)}
+.pic.wide{grid-column:span 2;aspect-ratio:16/10}
+.song{
+  background:radial-gradient(circle at 50% 35%,#104a8d,#061735 65%);
+}
+.disc{
+  width:210px;height:210px;border-radius:50%;margin:0 auto 28px;
+  background:radial-gradient(circle,#071a3d 0 8%,#9bdfff 9% 11%,#1677ff 12% 38%,#071a3d 39% 41%,#3caeff 42% 48%,#071a3d 49%);
+  box-shadow:0 0 55px rgba(70,184,255,.35);
+  animation:spin 7s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.final{
+  background:linear-gradient(160deg,#061735,#0c4f91,#061735);
+}
+.final .big{font-size:clamp(2.4rem,10vw,5rem);line-height:1.15}
+.signature{font-family:Pacifico,cursive;font-size:1.8rem;color:#9ee0ff}
+.secret{display:none;margin-top:25px}
+.secret.show{display:block;animation:rise .7s ease both}
+footer{padding:30px;text-align:center;background:#061735;color:#78bce9}
+@media(max-width:520px){
+  section{padding:65px 18px}
+  .letter{padding:24px}
+  .grid{gap:9px}
+  .disc{width:175px;height:175px}
+}
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<section class="hero">
+  <div class="card">
+    <div class="glow fade"></div>
+    <div class="small fade delay1">A tiny corner of the internet...</div>
+    <h1 class="script fade delay2">For my Babiii 💙</h1>
+    <p class="fade delay2">I made this little thing just for you.</p>
+    <button class="fade delay3" onclick="document.getElementById('message').scrollIntoView()">Open my heart 💌</button>
+  </div>
+</section>
+
+<section class="message" id="message">
+  <div class="card">
+    <div class="small">A message from your Bab</div>
+    <h2 class="script">Hi Babiii 🦋</h2>
+    <div class="letter">
+      <p>
+        I can’t be a nonchalant boyfriend to you — I’m already claiming that role 😭😂
+      </p>
+      <p>
+        You deserve every kind of love, Babiii. I miss youuu, my pretty morena baddie Filipina. 🥹💙
+      </p>
+      <p>
+        I love youuu so much. I hope this little thing I made for you makes you smile,
+        even just a little. 🫶🏻
+      </p>
+      <p class="signature">— Your Bab 💙</p>
+    </div>
+    <br>
+    <button onclick="document.getElementById('gallery').scrollIntoView()">Our little moments 📸</button>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="card">
+    <div class="small">Some of my favourite people + moments</div>
+    <h2 class="script">Us 💙</h2>
+    <div class="grid">
+      <img class="pic wide" src="photos/photo1.jpeg" alt="A memory together">
+      <img class="pic" src="photos/photo2.jpeg" alt="A photo of Babiii">
+      <img class="pic" src="photos/photo3.jpeg" alt="A photo of Babiii">
+      <img class="pic" src="photos/photo4.jpeg" alt="A memory together">
+      <img class="pic" src="photos/photo5.jpeg" alt="A memory together">
+    </div>
+    <br>
+    <button onclick="document.getElementById('song').scrollIntoView()">One for you 🎧</button>
+  </div>
+</section>
+
+<section class="song" id="song">
+  <div class="card">
+    <div class="disc"></div>
+    <div class="small">Press play when you're ready 🎶</div>
+    <h2 class="script">Loving Is Easy 💙</h2>
+    <p>Rex Orange County</p>
+    <p class="small">I can't include the copyrighted audio directly, but this button takes you to the song.</p>
+    <a class="btn" href="https://open.spotify.com/search/Loving%20Is%20Easy%20Rex%20Orange%20County" target="_blank" rel="noopener">Play our song ♫</a>
+    <br><br>
+    <button onclick="document.getElementById('final').scrollIntoView()">There's one more thing... 🥹</button>
+  </div>
+</section>
+
+<section class="final" id="final">
+  <div class="card">
+    <div class="small">Last one, Babiii...</div>
+    <div class="big script">You make my days a little softer. 💙</div>
+    <p>
+      Distance, busy days, random moments — none of it changes the fact
+      that I'm grateful you're my person.
+    </p>
+    <button onclick="document.getElementById('secret').classList.add('show');this.style.display='none'">
+      One last secret 🤫
+    </button>
+    <div id="secret" class="secret">
+      <h2 class="script">I love youuu, Babiii. 💙</h2>
+      <p>Now go smile for me, pretty girl. 😚</p>
+      <div class="signature">Forever your Bab 🫶🏻</div>
+    </div>
+  </div>
+</section>
+
+<footer>Made with love, blue pixels & a little bit of me. 💙</footer>
+
+<script>
+const container=document.getElementById("hearts");
+const symbols=["💙","♡","✦","🦋","⋆"];
+for(let i=0;i<22;i++){
+  const s=document.createElement("span");
+  s.className="heart";
+  s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  s.style.left=Math.random()*100+"%";
+  s.style.fontSize=(12+Math.random()*22)+"px";
+  s.style.animationDuration=(7+Math.random()*9)+"s";
+  s.style.animationDelay=(-Math.random()*12)+"s";
+  container.appendChild(s);
+}
+</script>
+</body>
+</html>
